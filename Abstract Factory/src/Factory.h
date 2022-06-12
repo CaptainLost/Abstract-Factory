@@ -4,19 +4,19 @@
 class BaseFactory
 {
 public:
-	virtual Food* CreateSmallFood() = 0;
-	virtual Food* CreateBigFood() = 0;
+	virtual BaseFood* CreateSmallFood() = 0;
+	virtual BaseFood* CreateBigFood() = 0;
 };
 
 class SnackFactory : public BaseFactory
 {
 public:
-	Food* CreateSmallFood()
+	BaseFood* CreateSmallFood()
 	{
 		return new Chocolate();
 	}
 
-	Food* CreateBigFood()
+	BaseFood* CreateBigFood()
 	{
 		return new Cake();
 	}
@@ -25,12 +25,12 @@ public:
 class FruitFactory : public BaseFactory
 {
 public:
-	Food* CreateSmallFood()
+	BaseFood* CreateSmallFood()
 	{
 		return new Apple();
 	}
 
-	Food* CreateBigFood()
+	BaseFood* CreateBigFood()
 	{
 		return new Watermelon();
 	}
@@ -39,12 +39,12 @@ public:
 class FastFoodFactory : public BaseFactory
 {
 public:
-	Food* CreateSmallFood()
+	BaseFood* CreateSmallFood()
 	{
 		return new Chips();
 	}
 
-	Food* CreateBigFood()
+	BaseFood* CreateBigFood()
 	{
 		return new Pizza();
 	}

@@ -22,7 +22,7 @@ std::string Watermelon::GetName()
 	return "Watermelon";
 }
 
-// Fast food
+// Fast Food
 std::string Chips::GetName()
 {
 	return "Chips";

@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 	BaseFactory* fastFoodFactory = new FastFoodFactory();
 
 	BaseFactory* factoryArray[3] = { snackFactory, fruitFactory, fastFoodFactory };
-	Food* foodArray[6];
+	BaseFood* foodArray[6];
 
 	for (int i = 0; i < 6; i = i + 2)
 	{
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
 	for (int i = 0; i < 6; i++)
 	{
-		Food* food = foodArray[i];
+		BaseFood* food = foodArray[i];
 
 		std::cout << "I am " << food->GetName() << '\n';
 

@@ -1,46 +1,46 @@
 #pragma once
 #include <string>
 
-class Food
+class BaseFood
 {
 public:
 	virtual std::string GetName() = 0;
 };
 
 // Snacks
-class Chocolate : public Food
+class Chocolate : public BaseFood
 {
 public:
 	std::string GetName();
 };
 
-class Cake : public Food
+class Cake : public BaseFood
 {
 public:
 	std::string GetName();
 };
 
 // Fruits
-class Apple : public Food
+class Apple : public BaseFood
 {
 public:
 	std::string GetName();
 };
 
-class Watermelon : public Food
+class Watermelon : public BaseFood
 {
 public:
 	std::string GetName();
 };
 
 // Fast food
-class Chips : public Food
+class Chips : public BaseFood
 {
 public:
 	std::string GetName();
 };
 
-class Pizza : public Food
+class Pizza : public BaseFood
 {
 public:
 	std::string GetName();
